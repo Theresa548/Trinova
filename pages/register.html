@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Register | FoodLoop</title>
+    <title>Create Account | FoodLoop</title>
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Authentication CSS -->
     <link rel="stylesheet" href="../css/auth.css">
 </head>
 
@@ -14,32 +18,73 @@
 
     <div class="auth-page">
 
-        <!-- LEFT SIDE -->
+        <!-- =====================================================
+             LEFT VISUAL PANEL
+        ====================================================== -->
+
         <div class="auth-visual">
 
-            <div class="auth-logo">
-                <span class="logo-icon">🌿</span>
+            <div class="auth-brand">
+                <div class="brand-icon">
+                    🌱
+                </div>
+
                 <span>FoodLoop</span>
             </div>
 
+
             <div class="auth-visual-content">
 
-                <div class="auth-leaf">🍃</div>
-
-                <h1>
-                    Be Part of the<br>
-                    <span>FoodLoop</span>
-                </h1>
-
-                <p>
-                    Join our community and help turn surplus food
-                    into meaningful support for people who need it.
+                <p class="eyebrow">
+                    JOIN THE MOVEMENT
                 </p>
 
-                <div class="auth-quote">
+                <h1>
+                    Make an Impact
+                    <span>One Meal at a Time.</span>
+                </h1>
+
+                <p class="visual-description">
+                    Join the FoodLoop community and help connect
+                    surplus food with people and communities who
+                    need it most.
+                </p>
+
+
+                <!-- Impact Cards -->
+
+                <div class="impact-card">
+
+                    <div class="impact-icon">
+                        ♻️
+                    </div>
+
+                    <div>
+                        <strong>Reduce Waste</strong>
+                        <span>Save surplus food</span>
+                    </div>
+
+                </div>
+
+
+                <div class="impact-card">
+
+                    <div class="impact-icon">
+                        🤝
+                    </div>
+
+                    <div>
+                        <strong>Support Communities</strong>
+                        <span>Help people in need</span>
+                    </div>
+
+                </div>
+
+
+                <div class="visual-quote">
                     <span>“</span>
-                    Every meal saved is a step towards
-                    a more sustainable future.
+                    Together, we can turn surplus into support
+                    and waste into impact.
                 </div>
 
             </div>
@@ -47,36 +92,66 @@
         </div>
 
 
-        <!-- RIGHT SIDE -->
-        <div class="auth-form-section">
+        <!-- =====================================================
+             RIGHT REGISTRATION PANEL
+        ====================================================== -->
+
+        <div class="auth-content">
 
             <div class="auth-form-container">
 
-                <!-- Mobile Logo -->
-                <div class="mobile-auth-logo">
-                    <span class="logo-icon">🌿</span>
-                    <span>FoodLoop</span>
-                </div>
-
                 <div class="auth-heading">
 
-                    <span class="auth-small-title">
+                    <p class="eyebrow">
                         GET STARTED
-                    </span>
+                    </p>
 
-                    <h2>Create your account</h2>
+                    <h2>
+                        Create your account
+                    </h2>
 
                     <p>
-                        Join FoodLoop and make a difference.
+                        Join the FoodLoop community today.
                     </p>
 
                 </div>
 
 
-                <!-- REGISTER FORM -->
-                <form id="registerForm" class="auth-form">
+                <!-- =================================================
+                     ERROR MESSAGE
+                ================================================== -->
+
+                <div
+                    id="errorMessage"
+                    class="auth-message error-message"
+                    style="display: none;"
+                ></div>
+
+
+                <!-- =================================================
+                     SUCCESS MESSAGE
+                ================================================== -->
+
+                <div
+                    id="successMessage"
+                    class="auth-message success-message"
+                    style="display: none;"
+                ></div>
+
+
+                <!-- =================================================
+                     REGISTRATION FORM
+                ================================================== -->
+
+                <form
+                    id="registerForm"
+                    class="auth-form"
+                    novalidate
+                >
+
 
                     <!-- Full Name -->
+
                     <div class="form-group">
 
                         <label for="fullName">
@@ -88,6 +163,7 @@
                             id="fullName"
                             name="fullName"
                             placeholder="Enter your full name"
+                            autocomplete="name"
                             required
                         >
 
@@ -95,6 +171,7 @@
 
 
                     <!-- Email -->
+
                     <div class="form-group">
 
                         <label for="email">
@@ -105,18 +182,20 @@
                             type="email"
                             id="email"
                             name="email"
-                            placeholder="Enter your email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
                             required
                         >
 
                     </div>
 
 
-                    <!-- Role -->
+                    <!-- Account Type -->
+
                     <div class="form-group">
 
                         <label for="role">
-                            I am registering as
+                            Account Type
                         </label>
 
                         <select
@@ -126,27 +205,28 @@
                         >
 
                             <option value="">
-                                Select your role
+                                Select account type
                             </option>
 
-                            <option value="DONOR">
+                            <option value="donor">
                                 Food Donor
                             </option>
 
-                            <option value="NGO">
-                                NGO
-                            </option>
-
-                            <option value="SHELTER">
-                                Shelter
+                            <option value="ngo">
+                                NGO / Shelter
                             </option>
 
                         </select>
+
+                        <small>
+                            Choose the role that best describes you.
+                        </small>
 
                     </div>
 
 
                     <!-- Password -->
+
                     <div class="form-group">
 
                         <label for="password">
@@ -160,6 +240,8 @@
                                 id="password"
                                 name="password"
                                 placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="8"
                                 required
                             >
 
@@ -168,15 +250,20 @@
                                 class="password-toggle"
                                 onclick="togglePassword('password', this)"
                             >
-                                👁
+                                Show
                             </button>
 
                         </div>
+
+                        <small>
+                            Use at least 8 characters.
+                        </small>
 
                     </div>
 
 
                     <!-- Confirm Password -->
+
                     <div class="form-group">
 
                         <label for="confirmPassword">
@@ -189,7 +276,9 @@
                                 type="password"
                                 id="confirmPassword"
                                 name="confirmPassword"
-                                placeholder="Re-enter your password"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                minlength="8"
                                 required
                             >
 
@@ -198,7 +287,7 @@
                                 class="password-toggle"
                                 onclick="togglePassword('confirmPassword', this)"
                             >
-                                👁
+                                Show
                             </button>
 
                         </div>
@@ -207,6 +296,7 @@
 
 
                     <!-- Terms -->
+
                     <div class="terms-row">
 
                         <label class="checkbox-label">
@@ -214,18 +304,19 @@
                             <input
                                 type="checkbox"
                                 id="terms"
+                                name="terms"
                                 required
                             >
 
                             <span>
                                 I agree to the
                                 <a href="#" onclick="return false;">
-                                    Terms & Conditions
+                                    Terms &amp; Conditions
                                 </a>
                                 and
                                 <a href="#" onclick="return false;">
                                     Privacy Policy
-                                </a>
+                                </a>.
                             </span>
 
                         </label>
@@ -233,18 +324,25 @@
                     </div>
 
 
-                    <!-- Register Button -->
+                    <!-- Create Account -->
+
                     <button
                         type="submit"
-                        class="auth-btn"
+                        class="auth-button"
+                        id="registerButton"
                     >
                         Create Account
+                        <span>→</span>
                     </button>
+
 
                 </form>
 
 
-                <!-- Login Link -->
+                <!-- =================================================
+                     LOGIN LINK
+                ================================================== -->
+
                 <div class="auth-footer">
 
                     <span>
@@ -264,8 +362,16 @@
     </div>
 
 
-    <!-- JavaScript -->
+    <!-- =========================================================
+         JAVASCRIPT
+         
+         IMPORTANT:
+         api.js MUST load before auth.js
+    ========================================================== -->
+
+    <script src="../js/api.js"></script>
     <script src="../js/auth.js"></script>
 
 </body>
+
 </html>
