@@ -1,0 +1,19 @@
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+
+# Keep the example configuration file
+!.env.example
+
+# IDE and operating system files
+.vscode/
+.DS_Store
