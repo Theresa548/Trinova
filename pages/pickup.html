@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pickup Details | FoodLoop</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pickup.css">
+</head>
+
+<body>
+
+<div class="pickup-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="pickup-sidebar">
+
+        <div class="pickup-logo">
+            <div class="logo-icon">🌿</div>
+            <span>FoodLoop</span>
+        </div>
+
+        <nav class="pickup-nav">
+
+            <a href="ngo-dashboard.html">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="ngo-dashboard.html#available-food">
+                <span>🍱</span>
+                Find Food
+            </a>
+
+            <a href="ngo-dashboard.html#active-claims">
+                <span>📋</span>
+                My Claims
+            </a>
+
+            <a href="pickup.html" class="active">
+                <span>🚚</span>
+                Pickup Schedule
+            </a>
+
+            <a href="ngo-dashboard.html#impact-section">
+                <span>🌱</span>
+                Impact
+            </a>
+
+            <a href="#">
+                <span>⚙️</span>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="pickup-sidebar-bottom">
+
+            <div class="pickup-user">
+
+                <div class="pickup-avatar">
+                    HH
+                </div>
+
+                <div>
+                    <strong>Helping Hands</strong>
+                    <small>Verified NGO</small>
+                </div>
+
+            </div>
+
+            <button id="logoutBtn" class="pickup-logout">
+                🚪 Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="pickup-main">
+
+        <!-- MOBILE HEADER -->
+
+        <div class="pickup-mobile-header">
+
+            <div class="pickup-logo">
+                <div class="logo-icon">🌿</div>
+                <span>FoodLoop</span>
+            </div>
+
+            <button id="menuBtn" class="pickup-menu-btn">
+                ☰
+            </button>
+
+        </div>
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="pickup-header">
+
+            <div>
+
+                <a href="ngo-dashboard.html#active-claims"
+                   class="back-link">
+                    ← Back to My Claims
+                </a>
+
+                <span class="page-label">
+                    PICKUP DETAILS
+                </span>
+
+                <h1>
+                    Rice & Dal
+                </h1>
+
+                <p>
+                    Complete the collection process for this donation.
+                </p>
+
+            </div>
+
+
+            <span class="pickup-status">
+                PICKUP SCHEDULED
+            </span>
+
+        </header>
+
+
+        <!-- ================= PICKUP SUMMARY ================= -->
+
+        <section class="pickup-summary">
+
+            <div class="summary-item">
+
+                <span class="summary-icon">
+                    🍽️
+                </span>
+
+                <div>
+                    <small>Food Quantity</small>
+                    <strong>30 Meals</strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-item">
+
+                <span class="summary-icon">
+                    📅
+                </span>
+
+                <div>
+                    <small>Pickup Date</small>
+                    <strong>09 October 2026</strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-item">
+
+                <span class="summary-icon">
+                    🕝
+                </span>
+
+                <div>
+                    <small>Pickup Time</small>
+                    <strong>2:30 PM</strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-item">
+
+                <span class="summary-icon">
+                    📍
+                </span>
+
+                <div>
+                    <small>Distance</small>
+                    <strong>1.8 km</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MAIN GRID ================= -->
+
+        <div class="pickup-content-grid">
+
+
+            <!-- LEFT -->
+
+            <div class="pickup-left">
+
+
+                <!-- LOCATION -->
+
+                <section class="pickup-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="card-label">
+                                COLLECTION LOCATION
+                            </span>
+
+                            <h2>
+                                Pickup Address
+                            </h2>
+
+                        </div>
+
+                        <span class="location-icon">
+                            📍
+                        </span>
+
+                    </div>
+
+
+                    <div class="address-box">
+
+                        <div class="address-icon">
+                            🏪
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Green Leaf Restaurant
+                            </strong>
+
+                            <p>
+                                124, MG Road,<br>
+                                Camp, Pune, Maharashtra
+                            </p>
+
+                            <span>
+                                📍 Approx. 1.8 km from your organization
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button id="directionsBtn"
+                            class="outline-btn full-btn">
+
+                        🧭 Get Directions
+
+                    </button>
+
+                </section>
+
+
+                <!-- DONOR -->
+
+                <section class="pickup-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="card-label">
+                                DONOR INFORMATION
+                            </span>
+
+                            <h2>
+                                Food Donor
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="donor-box">
+
+                        <div class="donor-avatar">
+                            GL
+                        </div>
+
+                        <div class="donor-details">
+
+                            <strong>
+                                Green Leaf Restaurant
+                            </strong>
+
+                            <span>
+                                Verified Food Donor ✓
+                            </span>
+
+                            <small>
+                                Food Partner since 2026
+                            </small>
+
+                        </div>
+
+                        <div class="verified-badge">
+                            ✓
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- FOOD INFORMATION -->
+
+                <section class="pickup-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="card-label">
+                                DONATION INFORMATION
+                            </span>
+
+                            <h2>
+                                Food Details
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-info-grid">
+
+                        <div>
+                            <span>Food</span>
+                            <strong>Rice & Dal</strong>
+                        </div>
+
+                        <div>
+                            <span>Category</span>
+                            <strong>Prepared Meals</strong>
+                        </div>
+
+                        <div>
+                            <span>Quantity</span>
+                            <strong>30 meals</strong>
+                        </div>
+
+                        <div>
+                            <span>Best Before</span>
+                            <strong>Today, 5:00 PM</strong>
+                        </div>
+
+                        <div>
+                            <span>Storage</span>
+                            <strong>Refrigerated</strong>
+                        </div>
+
+                        <div>
+                            <span>Donation ID</span>
+                            <strong>FL-2026-00118</strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SAFETY -->
+
+                <section class="safety-card">
+
+                    <div class="safety-icon">
+                        🛡️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Food Safety Reminder
+                        </h3>
+
+                        <p>
+                            Please inspect the food packaging and condition
+                            before accepting the donation. If the food appears
+                            unsafe or damaged, report it before collection.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="pickup-right">
+
+
+                <!-- VERIFICATION -->
+
+                <section class="verification-card">
+
+                    <div class="verification-top">
+
+                        <span class="card-label">
+                            PICKUP VERIFICATION
+                        </span>
+
+                        <span class="verification-status">
+                            REQUIRED
+                        </span>
+
+                    </div>
+
+
+                    <div class="verification-icon">
+                        ✓
+                    </div>
+
+
+                    <h2>
+                        Enter Pickup Code
+                    </h2>
+
+                    <p>
+                        Ask the donor for the 6-digit pickup
+                        verification code when you arrive.
+                    </p>
+
+
+                    <div class="code-inputs">
+
+                        <input type="text"
+                               maxlength="1"
+                               class="code-input">
+
+                        <input type="text"
+                               maxlength="1"
+                               class="code-input">
+
+                        <input type="text"
+                               maxlength="1"
+                               class="code-input">
+
+                        <input type="text"
+                               maxlength="1"
+                               class="code-input">
+
+                        <input type="text"
+                               maxlength="1"
+                               class="code-input">
+
+                        <input type="text"
+                               maxlength="1"
+                               class="code-input">
+
+                    </div>
+
+
+                    <button id="verifyBtn"
+                            class="verify-btn">
+
+                        Verify Pickup
+
+                    </button>
+
+
+                    <p id="verificationMessage"
+                       class="verification-message">
+                    </p>
+
+                </section>
+
+
+                <!-- CONTACT -->
+
+                <section class="contact-card">
+
+                    <span class="card-label">
+                        PICKUP CONTACT
+                    </span>
+
+                    <h3>
+                        Green Leaf Restaurant
+                    </h3>
+
+                    <div class="contact-row">
+
+                        <span>👤</span>
+
+                        <div>
+                            <small>Contact Person</small>
+                            <strong>Restaurant Manager</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-row">
+
+                        <span>📞</span>
+
+                        <div>
+                            <small>Phone</small>
+                            <strong>+91 XXXXX XXXXX</strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- TIMELINE -->
+
+                <section class="pickup-card">
+
+                    <span class="card-label">
+                        PICKUP STATUS
+                    </span>
+
+                    <h2>
+                        Collection Progress
+                    </h2>
+
+
+                    <div class="pickup-timeline">
+
+                        <div class="timeline-item completed">
+
+                            <div class="timeline-dot">
+                                ✓
+                            </div>
+
+                            <div>
+                                <strong>Donation Claimed</strong>
+                                <span>Completed</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item completed">
+
+                            <div class="timeline-dot">
+                                ✓
+                            </div>
+
+                            <div>
+                                <strong>Pickup Scheduled</strong>
+                                <span>Today · 2:30 PM</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item current">
+
+                            <div class="timeline-dot">
+                                3
+                            </div>
+
+                            <div>
+                                <strong>Pickup Verification</strong>
+                                <span>Waiting for code</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-dot">
+                                4
+                            </div>
+
+                            <div>
+                                <strong>Food Collected</strong>
+                                <span>Pending</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-dot">
+                                5
+                            </div>
+
+                            <div>
+                                <strong>Donation Completed</strong>
+                                <span>Pending</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= COLLECTION COMPLETE ================= -->
+
+        <section id="completeSection"
+                 class="complete-section">
+
+            <div class="complete-icon">
+                🎉
+            </div>
+
+            <div>
+
+                <span class="card-label">
+                    COLLECTION VERIFIED
+                </span>
+
+                <h2>
+                    Food Successfully Collected!
+                </h2>
+
+                <p>
+                    This donation has been successfully collected.
+                    Thank you for helping turn surplus food into meals.
+                </p>
+
+            </div>
+
+            <a href="ngo-dashboard.html"
+               class="complete-btn">
+                Back to Dashboard
+            </a>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="pickup-footer">
+
+            <p>
+                © 2026 FoodLoop · Turning surplus into support.
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="../js/pickup.js"></script>
+
+</body>
+</html>

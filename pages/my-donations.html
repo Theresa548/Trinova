@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Donations | FoodLoop</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/my-donations.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="donations-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">🍃</div>
+            <span>Food<span>Loop</span></span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="donor-dashboard.html" class="nav-item">
+                <span>▦</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="create-donation.html" class="nav-item">
+                <span>＋</span>
+                <span>Create Donation</span>
+            </a>
+
+            <a href="my-donations.html" class="nav-item active">
+                <span>📦</span>
+                <span>My Donations</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>📊</span>
+                <span>Impact</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="help-box">
+                <div class="help-icon">?</div>
+
+                <div>
+                    <strong>Need help?</strong>
+                    <p>Contact FoodLoop support</p>
+                </div>
+            </div>
+
+            <button class="logout-btn" id="logoutBtn">
+                ↪ &nbsp; Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="donations-main">
+
+        <!-- HEADER -->
+
+        <header class="page-header">
+
+            <div>
+                <a href="donor-dashboard.html" class="back-link">
+                    ← Dashboard
+                </a>
+
+                <h1>My Donations</h1>
+
+                <p>
+                    Track and manage the food you've shared with the community.
+                </p>
+            </div>
+
+            <a href="create-donation.html" class="create-btn">
+                + Create Donation
+            </a>
+
+        </header>
+
+
+        <!-- SUMMARY -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card">
+                <div class="summary-icon green">📦</div>
+
+                <div>
+                    <span>Total Donations</span>
+                    <strong>44</strong>
+                </div>
+            </div>
+
+
+            <div class="summary-card">
+                <div class="summary-icon orange">⏳</div>
+
+                <div>
+                    <span>Available</span>
+                    <strong>04</strong>
+                </div>
+            </div>
+
+
+            <div class="summary-card">
+                <div class="summary-icon blue">🤝</div>
+
+                <div>
+                    <span>Claimed</span>
+                    <strong>12</strong>
+                </div>
+            </div>
+
+
+            <div class="summary-card">
+                <div class="summary-icon purple">✓</div>
+
+                <div>
+                    <span>Completed</span>
+                    <strong>28</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- FILTER BAR -->
+
+        <section class="filter-card">
+
+            <div class="filter-tabs">
+
+                <button class="filter-tab active" data-filter="all">
+                    All
+                    <span>44</span>
+                </button>
+
+                <button class="filter-tab" data-filter="available">
+                    Available
+                    <span>04</span>
+                </button>
+
+                <button class="filter-tab" data-filter="claimed">
+                    Claimed
+                    <span>12</span>
+                </button>
+
+                <button class="filter-tab" data-filter="completed">
+                    Completed
+                    <span>28</span>
+                </button>
+
+            </div>
+
+
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search donations..."
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- DONATION LIST -->
+
+        <section class="donations-container">
+
+
+            <!-- DONATION 1 -->
+
+            <article
+                class="donation-card"
+                data-status="available"
+                data-name="Vegetable Biryani"
+            >
+
+                <div class="food-image">
+                    🍛
+                </div>
+
+                <div class="donation-details">
+
+                    <div class="donation-title">
+
+                        <div>
+                            <h2>Vegetable Biryani</h2>
+
+                            <span class="category">
+                                Cooked Food
+                            </span>
+                        </div>
+
+                        <span class="status available">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <div class="donation-meta">
+
+                        <span>
+                            🍽 25 meals
+                        </span>
+
+                        <span>
+                            📅 Today
+                        </span>
+
+                        <span>
+                            📍 Pune
+                        </span>
+
+                    </div>
+
+
+                    <div class="donation-footer">
+
+                        <span>
+                            Created today at 10:30 AM
+                        </span>
+
+                        <a href="donation-details.html" class="view-btn">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- DONATION 2 -->
+
+            <article
+                class="donation-card"
+                data-status="claimed"
+                data-name="Fresh Bread Buns"
+            >
+
+                <div class="food-image">
+                    🍞
+                </div>
+
+                <div class="donation-details">
+
+                    <div class="donation-title">
+
+                        <div>
+                            <h2>Fresh Bread & Buns</h2>
+
+                            <span class="category">
+                                Bakery
+                            </span>
+                        </div>
+
+                        <span class="status claimed">
+                            Claimed
+                        </span>
+
+                    </div>
+
+
+                    <div class="donation-meta">
+
+                        <span>
+                            🍽 40 meals
+                        </span>
+
+                        <span>
+                            📅 Yesterday
+                        </span>
+
+                        <span>
+                            📍 Pune
+                        </span>
+
+                    </div>
+
+
+                    <div class="claim-info">
+                        🤝 Claimed by <strong>Helping Hands NGO</strong>
+                    </div>
+
+
+                    <div class="donation-footer">
+
+                        <span>
+                            Pickup scheduled
+                        </span>
+
+                        <a href="donation-details.html" class="view-btn">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- DONATION 3 -->
+
+            <article
+                class="donation-card"
+                data-status="completed"
+                data-name="Rice Dal"
+            >
+
+                <div class="food-image">
+                    🍚
+                </div>
+
+                <div class="donation-details">
+
+                    <div class="donation-title">
+
+                        <div>
+                            <h2>Rice & Dal</h2>
+
+                            <span class="category">
+                                Cooked Food
+                            </span>
+                        </div>
+
+                        <span class="status completed">
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <div class="donation-meta">
+
+                        <span>
+                            🍽 30 meals
+                        </span>
+
+                        <span>
+                            📅 2 days ago
+                        </span>
+
+                        <span>
+                            📍 Pune
+                        </span>
+
+                    </div>
+
+
+                    <div class="claim-info completed-info">
+                        ✓ Successfully collected by <strong>Hope Shelter</strong>
+                    </div>
+
+
+                    <div class="donation-footer">
+
+                        <span>
+                            Completed 2 days ago
+                        </span>
+
+                        <a href="donation-details.html" class="view-btn">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- DONATION 4 -->
+
+            <article
+                class="donation-card"
+                data-status="completed"
+                data-name="Mixed Salad"
+            >
+
+                <div class="food-image">
+                    🥗
+                </div>
+
+                <div class="donation-details">
+
+                    <div class="donation-title">
+
+                        <div>
+                            <h2>Mixed Salad</h2>
+
+                            <span class="category">
+                                Prepared Food
+                            </span>
+                        </div>
+
+                        <span class="status completed">
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <div class="donation-meta">
+
+                        <span>
+                            🍽 15 meals
+                        </span>
+
+                        <span>
+                            📅 3 days ago
+                        </span>
+
+                        <span>
+                            📍 Pune
+                        </span>
+
+                    </div>
+
+
+                    <div class="donation-footer">
+
+                        <span>
+                            Completed 3 days ago
+                        </span>
+
+                        <a href="donation-details.html" class="view-btn">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- NO RESULTS -->
+
+            <div class="no-results" id="noResults">
+
+                <div>🔍</div>
+
+                <h3>No donations found</h3>
+
+                <p>
+                    Try changing your search or filter.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/my-donations.js"></script>
+
+</body>
+</html>

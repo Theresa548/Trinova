@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NGO Dashboard | FoodLoop</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/ngo-dashboard.css">
+</head>
+
+<body>
+
+<div class="ngo-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="ngo-sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">🌿</div>
+            <span>FoodLoop</span>
+        </div>
+
+        <nav class="ngo-nav">
+
+            <a href="ngo-dashboard.html" class="nav-item active">
+                <span>📊</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#available-food" class="nav-item">
+                <span>🍱</span>
+                <span>Find Food</span>
+            </a>
+
+            <a href="#active-claims" class="nav-item">
+                <span>📋</span>
+                <span>My Claims</span>
+            </a>
+
+            <a href="#pickup-section" class="nav-item">
+                <span>🚚</span>
+                <span>Pickup Schedule</span>
+            </a>
+
+            <a href="#impact-section" class="nav-item">
+                <span>🌱</span>
+                <span>Impact</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>⚙️</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="ngo-profile-mini">
+                <div class="ngo-avatar">HH</div>
+
+                <div>
+                    <strong>Helping Hands</strong>
+                    <small>Verified NGO</small>
+                </div>
+            </div>
+
+            <button class="logout-btn" id="logoutBtn">
+                🚪 Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="ngo-main">
+
+        <!-- MOBILE HEADER -->
+        <div class="mobile-dashboard-header">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">🌿</div>
+                <span>FoodLoop</span>
+            </div>
+
+            <button id="ngoMenuBtn" class="mobile-menu-btn">
+                ☰
+            </button>
+
+        </div>
+
+
+        <!-- TOP HEADER -->
+        <header class="ngo-header">
+
+            <div>
+                <p class="dashboard-label">NGO DASHBOARD</p>
+
+                <h1>
+                    Good morning, Helping Hands! 👋
+                </h1>
+
+                <p>
+                    Find surplus food and help turn it into meals for your community.
+                </p>
+            </div>
+
+            <div class="ngo-header-profile">
+
+                <div class="notification">
+                    🔔
+                    <span>2</span>
+                </div>
+
+                <div class="ngo-avatar large">
+                    HH
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- QUICK ACTION -->
+        <section class="ngo-quick-action">
+
+            <div>
+                <span class="quick-label">READY TO HELP?</span>
+
+                <h2>
+                    Find surplus food near you.
+                </h2>
+
+                <p>
+                    Browse verified donations available for pickup in your area.
+                </p>
+            </div>
+
+            <a href="#available-food" class="primary-btn">
+                🍱 Find Food
+            </a>
+
+        </section>
+
+
+        <!-- STATS -->
+        <section class="ngo-stats-grid">
+
+            <div class="ngo-stat-card">
+
+                <div class="stat-icon green">
+                    🍱
+                </div>
+
+                <div>
+                    <span>Available Nearby</span>
+                    <strong>18</strong>
+                    <small>donations</small>
+                </div>
+
+            </div>
+
+
+            <div class="ngo-stat-card">
+
+                <div class="stat-icon orange">
+                    📋
+                </div>
+
+                <div>
+                    <span>My Active Claims</span>
+                    <strong>03</strong>
+                    <small>in progress</small>
+                </div>
+
+            </div>
+
+
+            <div class="ngo-stat-card">
+
+                <div class="stat-icon blue">
+                    🚚
+                </div>
+
+                <div>
+                    <span>Scheduled Pickups</span>
+                    <strong>02</strong>
+                    <small>today</small>
+                </div>
+
+            </div>
+
+
+            <div class="ngo-stat-card">
+
+                <div class="stat-icon purple">
+                    🍽️
+                </div>
+
+                <div>
+                    <span>Meals Received</span>
+                    <strong>2,480</strong>
+                    <small>this month</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AVAILABLE FOOD -->
+        <section class="dashboard-section" id="available-food">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">FOOD AVAILABLE NEAR YOU</span>
+
+                    <h2>
+                        Find Food
+                    </h2>
+
+                    <p>
+                        Verified food donations ready to be claimed.
+                    </p>
+                </div>
+
+                <a href="#" class="view-all">
+                    View All →
+                </a>
+
+            </div>
+
+
+            <!-- SEARCH + FILTER -->
+            <div class="food-controls">
+
+                <div class="search-box">
+
+                    <span>🔍</span>
+
+                    <input
+                        type="text"
+                        id="foodSearch"
+                        placeholder="Search food donations..."
+                    >
+
+                </div>
+
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="meals">
+                        Prepared Meals
+                    </option>
+
+                    <option value="bakery">
+                        Bakery
+                    </option>
+
+                    <option value="vegetables">
+                        Vegetables
+                    </option>
+
+                    <option value="groceries">
+                        Groceries
+                    </option>
+
+                </select>
+
+
+                <select id="distanceFilter">
+
+                    <option value="all">
+                        Any Distance
+                    </option>
+
+                    <option value="2">
+                        Within 2 km
+                    </option>
+
+                    <option value="5">
+                        Within 5 km
+                    </option>
+
+                    <option value="10">
+                        Within 10 km
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- FOOD CARDS -->
+            <div class="food-grid" id="foodGrid">
+
+
+                <!-- CARD 1 -->
+                <article
+                    class="food-card"
+                    data-category="meals"
+                    data-distance="1.2"
+                    data-name="Vegetable Biryani"
+                >
+
+                    <div class="food-card-top">
+
+                        <div class="food-image">
+                            🍛
+                        </div>
+
+                        <span class="status-badge urgent">
+                            Urgent
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-card-body">
+
+                        <div class="food-category">
+                            PREPARED MEALS
+                        </div>
+
+                        <h3>
+                            Vegetable Biryani
+                        </h3>
+
+                        <p class="food-description">
+                            Freshly prepared vegetarian biryani suitable for community meals.
+                        </p>
+
+
+                        <div class="food-details">
+
+                            <div>
+                                <span>🍽️</span>
+                                <strong>25 meals</strong>
+                            </div>
+
+                            <div>
+                                <span>📍</span>
+                                <strong>1.2 km</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="expiry-row">
+
+                            <span>
+                                ⏱ Best before
+                            </span>
+
+                            <strong>
+                                Today, 3:00 PM
+                            </strong>
+
+                        </div>
+
+
+                        <div class="donor-info">
+
+                            <div class="donor-icon">
+                                🏪
+                            </div>
+
+                            <div>
+                                <small>Donated by</small>
+                                <strong>Verified Restaurant</strong>
+                            </div>
+
+                            <span class="verified">
+                                ✓
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="ngo-donation-details.html?id=124"
+                            class="claim-btn"
+                        >
+                            View & Claim →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 2 -->
+                <article
+                    class="food-card"
+                    data-category="bakery"
+                    data-distance="2.4"
+                    data-name="Fresh Chapati Sabzi"
+                >
+
+                    <div class="food-card-top">
+
+                        <div class="food-image">
+                            🫓
+                        </div>
+
+                        <span class="status-badge available">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-card-body">
+
+                        <div class="food-category">
+                            BAKERY & MEALS
+                        </div>
+
+                        <h3>
+                            Fresh Chapati & Sabzi
+                        </h3>
+
+                        <p class="food-description">
+                            Fresh chapatis with mixed vegetable sabzi from a catering service.
+                        </p>
+
+
+                        <div class="food-details">
+
+                            <div>
+                                <span>🍽️</span>
+                                <strong>40 meals</strong>
+                            </div>
+
+                            <div>
+                                <span>📍</span>
+                                <strong>2.4 km</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="expiry-row">
+
+                            <span>
+                                ⏱ Best before
+                            </span>
+
+                            <strong>
+                                Today, 6:00 PM
+                            </strong>
+
+                        </div>
+
+
+                        <div class="donor-info">
+
+                            <div class="donor-icon">
+                                🏨
+                            </div>
+
+                            <div>
+                                <small>Donated by</small>
+                                <strong>Verified Caterer</strong>
+                            </div>
+
+                            <span class="verified">
+                                ✓
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="ngo-donation-details.html?id=125"
+                            class="claim-btn"
+                        >
+                            View & Claim →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 3 -->
+                <article
+                    class="food-card"
+                    data-category="meals"
+                    data-distance="3.1"
+                    data-name="Packed Meals"
+                >
+
+                    <div class="food-card-top">
+
+                        <div class="food-image">
+                            🍱
+                        </div>
+
+                        <span class="status-badge available">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-card-body">
+
+                        <div class="food-category">
+                            PREPARED MEALS
+                        </div>
+
+                        <h3>
+                            Packed Meals
+                        </h3>
+
+                        <p class="food-description">
+                            Individually packed vegetarian meals, ready for distribution.
+                        </p>
+
+
+                        <div class="food-details">
+
+                            <div>
+                                <span>🍽️</span>
+                                <strong>60 meals</strong>
+                            </div>
+
+                            <div>
+                                <span>📍</span>
+                                <strong>3.1 km</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="expiry-row">
+
+                            <span>
+                                ⏱ Best before
+                            </span>
+
+                            <strong>
+                                Tomorrow, 11:00 AM
+                            </strong>
+
+                        </div>
+
+
+                        <div class="donor-info">
+
+                            <div class="donor-icon">
+                                🏢
+                            </div>
+
+                            <div>
+                                <small>Donated by</small>
+                                <strong>Corporate Cafeteria</strong>
+                            </div>
+
+                            <span class="verified">
+                                ✓
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="ngo-donation-details.html?id=126"
+                            class="claim-btn"
+                        >
+                            View & Claim →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 4 -->
+                <article
+                    class="food-card"
+                    data-category="vegetables"
+                    data-distance="4.7"
+                    data-name="Fresh Vegetables"
+                >
+
+                    <div class="food-card-top">
+
+                        <div class="food-image">
+                            🥦
+                        </div>
+
+                        <span class="status-badge available">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-card-body">
+
+                        <div class="food-category">
+                            VEGETABLES
+                        </div>
+
+                        <h3>
+                            Fresh Vegetables
+                        </h3>
+
+                        <p class="food-description">
+                            Assorted fresh vegetables including carrots, beans and capsicum.
+                        </p>
+
+
+                        <div class="food-details">
+
+                            <div>
+                                <span>⚖️</span>
+                                <strong>18 kg</strong>
+                            </div>
+
+                            <div>
+                                <span>📍</span>
+                                <strong>4.7 km</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="expiry-row">
+
+                            <span>
+                                ⏱ Best before
+                            </span>
+
+                            <strong>
+                                2 days
+                            </strong>
+
+                        </div>
+
+
+                        <div class="donor-info">
+
+                            <div class="donor-icon">
+                                🛒
+                            </div>
+
+                            <div>
+                                <small>Donated by</small>
+                                <strong>Supermarket</strong>
+                            </div>
+
+                            <span class="verified">
+                                ✓
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="ngo-donation-details.html?id=127"
+                            class="claim-btn"
+                        >
+                            View & Claim →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- NO RESULTS -->
+            <div id="noFoodResults" class="no-food-results">
+
+                <div>
+                    🔎
+                </div>
+
+                <h3>
+                    No donations found
+                </h3>
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIVE CLAIMS -->
+        <section
+            class="dashboard-section"
+            id="active-claims"
+        >
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">YOUR CURRENT REQUESTS</span>
+
+                    <h2>
+                        Active Claims
+                    </h2>
+
+                    <p>
+                        Food donations you've claimed or scheduled for pickup.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="claims-list">
+
+
+                <div class="claim-card">
+
+                    <div class="claim-food-icon">
+                        🍛
+                    </div>
+
+                    <div class="claim-info">
+
+                        <span class="claim-status">
+                            PICKUP SCHEDULED
+                        </span>
+
+                        <h3>
+                            Rice & Dal
+                        </h3>
+
+                        <p>
+                            30 meals · 1.8 km away
+                        </p>
+
+                    </div>
+
+                    <div class="claim-date">
+
+                        <span>
+                            📅 Today
+                        </span>
+
+                        <strong>
+                            2:30 PM
+                        </strong>
+
+                    </div>
+
+                    <button class="outline-btn">
+                        View
+                    </button>
+
+                </div>
+
+
+                <div class="claim-card">
+
+                    <div class="claim-food-icon">
+                        🥪
+                    </div>
+
+                    <div class="claim-info">
+
+                        <span class="claim-status pending">
+                            CLAIMED
+                        </span>
+
+                        <h3>
+                            Sandwiches
+                        </h3>
+
+                        <p>
+                            20 meals · 2.6 km away
+                        </p>
+
+                    </div>
+
+                    <div class="claim-date">
+
+                        <span>
+                            📅 Tomorrow
+                        </span>
+
+                        <strong>
+                            11:00 AM
+                        </strong>
+
+                    </div>
+
+                    <button class="outline-btn">
+                        View
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PICKUP -->
+        <section
+            class="dashboard-section"
+            id="pickup-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">UPCOMING COLLECTIONS</span>
+
+                    <h2>
+                        Pickup Schedule
+                    </h2>
+
+                    <p>
+                        Your upcoming food collection schedule.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="pickup-card">
+
+                <div class="pickup-date">
+
+                    <span>
+                        OCT
+                    </span>
+
+                    <strong>
+                        09
+                    </strong>
+
+                </div>
+
+
+                <div class="pickup-details">
+
+                    <span class="pickup-time">
+                        TODAY · 2:30 PM
+                    </span>
+
+                    <h3>
+                        Rice & Dal
+                    </h3>
+
+                    <p>
+                        📍 1.8 km · Verified Restaurant
+                    </p>
+
+                </div>
+
+
+                <div class="pickup-meals">
+                    <strong>30</strong>
+                    <span>meals</span>
+                </div>
+
+
+                <button class="primary-small-btn">
+                    Pickup Details
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- IMPACT -->
+        <section
+            class="ngo-impact-section"
+            id="impact-section"
+        >
+
+            <div class="impact-content">
+
+                <span class="section-label">
+                    YOUR COMMUNITY IMPACT
+                </span>
+
+                <h2>
+                    Every claim creates a ripple of good. 🌱
+                </h2>
+
+                <p>
+                    Together, FoodLoop NGOs have helped redirect surplus
+                    food away from waste and toward people who need it.
+                </p>
+
+
+                <div class="impact-stats">
+
+                    <div>
+                        <strong>2,480</strong>
+                        <span>Meals Received</span>
+                    </div>
+
+                    <div>
+                        <strong>186</strong>
+                        <span>Donations Collected</span>
+                    </div>
+
+                    <div>
+                        <strong>124 kg</strong>
+                        <span>Food Rescued</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="impact-visual">
+                🌍
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 FoodLoop · Turning surplus into support.
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="../js/ngo.js"></script>
+
+</body>
+</html>

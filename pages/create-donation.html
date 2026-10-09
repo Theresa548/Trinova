@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Donation | FoodLoop</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/donation.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="donation-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">🍃</div>
+            <span>Food<span>Loop</span></span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="donor-dashboard.html" class="nav-item">
+                <span>▦</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="create-donation.html" class="nav-item active">
+                <span>＋</span>
+                <span>Create Donation</span>
+            </a>
+
+            <a href="my-donations.html" class="nav-item">
+                <span>📦</span>
+                <span>My Donations</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>📊</span>
+                <span>Impact</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="help-box">
+                <div class="help-icon">?</div>
+
+                <div>
+                    <strong>Need help?</strong>
+                    <p>Contact FoodLoop support</p>
+                </div>
+            </div>
+
+            <button class="logout-btn" id="logoutBtn">
+                ↪ &nbsp; Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="donation-main">
+
+        <!-- HEADER -->
+
+        <header class="page-header">
+
+            <div>
+                <a href="donor-dashboard.html" class="back-link">
+                    ← Back to Dashboard
+                </a>
+
+                <h1>Create Food Donation</h1>
+
+                <p>
+                    Share your surplus food with a verified NGO or shelter.
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- FORM -->
+
+        <form id="donationForm" class="donation-form">
+
+
+            <!-- SECTION 1 -->
+
+            <section class="form-card">
+
+                <div class="section-heading">
+
+                    <div class="section-number">1</div>
+
+                    <div>
+                        <h2>Food Information</h2>
+                        <p>Tell us about the food you want to donate.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group full">
+
+                        <label for="foodName">
+                            Food Name <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="foodName"
+                            name="foodName"
+                            placeholder="e.g. Vegetable Biryani"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="foodCategory">
+                            Food Category <span>*</span>
+                        </label>
+
+                        <select id="foodCategory" required>
+
+                            <option value="">Select category</option>
+                            <option value="cooked">Cooked Food</option>
+                            <option value="bakery">Bakery</option>
+                            <option value="fruits">Fruits</option>
+                            <option value="vegetables">Vegetables</option>
+                            <option value="packaged">Packaged Food</option>
+                            <option value="dairy">Dairy</option>
+                            <option value="other">Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="quantity">
+                            Quantity <span>*</span>
+                        </label>
+
+                        <div class="quantity-input">
+
+                            <input
+                                type="number"
+                                id="quantity"
+                                min="1"
+                                placeholder="e.g. 25"
+                                required
+                            >
+
+                            <select id="quantityUnit">
+
+                                <option value="meals">Meals</option>
+                                <option value="kg">Kg</option>
+                                <option value="packets">Packets</option>
+                                <option value="boxes">Boxes</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="preparedDate">
+                            Preparation Date <span>*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            id="preparedDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="preparedTime">
+                            Preparation Time <span>*</span>
+                        </label>
+
+                        <input
+                            type="time"
+                            id="preparedTime"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="description">
+                            Food Description
+                        </label>
+
+                        <textarea
+                            id="description"
+                            rows="4"
+                            placeholder="Describe the food, ingredients, packaging, etc."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SECTION 2 -->
+
+            <section class="form-card">
+
+                <div class="section-heading">
+
+                    <div class="section-number">2</div>
+
+                    <div>
+                        <h2>Food Safety</h2>
+                        <p>Help NGOs understand whether the food is safe to distribute.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="safety-box">
+
+                    <div class="safety-icon">
+                        🛡️
+                    </div>
+
+                    <div>
+                        <strong>Food safety is important</strong>
+
+                        <p>
+                            Please provide accurate information about storage
+                            and preparation. Unsafe food may be rejected.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="storage">
+                            Storage Condition <span>*</span>
+                        </label>
+
+                        <select id="storage" required>
+
+                            <option value="">Select condition</option>
+                            <option value="refrigerated">Refrigerated</option>
+                            <option value="room_temperature">
+                                Room Temperature
+                            </option>
+                            <option value="heated">Kept Hot</option>
+                            <option value="frozen">Frozen</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="expiry">
+                            Best Before / Expiry <span>*</span>
+                        </label>
+
+                        <input
+                            type="datetime-local"
+                            id="expiry"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="safetyConfirm"
+                                required
+                            >
+
+                            <span>
+                                I confirm that the information provided is
+                                accurate and the food is safe for distribution.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SECTION 3 -->
+
+            <section class="form-card">
+
+                <div class="section-heading">
+
+                    <div class="section-number">3</div>
+
+                    <div>
+                        <h2>Pickup Information</h2>
+                        <p>Tell NGOs where and when they can collect the food.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group full">
+
+                        <label for="pickupAddress">
+                            Pickup Address <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="pickupAddress"
+                            rows="3"
+                            placeholder="Enter the complete pickup address"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="pickupDate">
+                            Available From <span>*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            id="pickupDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="pickupTime">
+                            Preferred Pickup Time <span>*</span>
+                        </label>
+
+                        <input
+                            type="time"
+                            id="pickupTime"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contactName">
+                            Contact Person <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contactName"
+                            placeholder="Person available for pickup"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contactPhone">
+                            Contact Number <span>*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="contactPhone"
+                            placeholder="e.g. 9876543210"
+                            pattern="[0-9]{10}"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SECTION 4 -->
+
+            <section class="form-card">
+
+                <div class="section-heading">
+
+                    <div class="section-number">4</div>
+
+                    <div>
+                        <h2>Final Confirmation</h2>
+                        <p>Review your donation before publishing.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="review-box">
+
+                    <div>
+                        <span>Food</span>
+                        <strong id="reviewFood">—</strong>
+                    </div>
+
+                    <div>
+                        <span>Quantity</span>
+                        <strong id="reviewQuantity">—</strong>
+                    </div>
+
+                    <div>
+                        <span>Category</span>
+                        <strong id="reviewCategory">—</strong>
+                    </div>
+
+                    <div>
+                        <span>Pickup</span>
+                        <strong id="reviewPickup">—</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="saveDraftBtn"
+                    >
+                        Save as Draft
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Publish Donation →
+                    </button>
+
+                </div>
+
+            </section>
+
+        </form>
+
+    </main>
+
+</div>
+
+
+<script src="../js/donation.js"></script>
+
+</body>
+</html>

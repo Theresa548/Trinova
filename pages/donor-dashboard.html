@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donor Dashboard | FoodLoop</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">🍃</div>
+            <span>Food<span>Loop</span></span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="donor-dashboard.html" class="nav-item active">
+                <span>▦</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="create-donation.html" class="nav-item">
+                <span>＋</span>
+                <span>Create Donation</span>
+            </a>
+
+            <a href="my-donations.html" class="nav-item">
+                <span>📦</span>
+                <span>My Donations</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>📊</span>
+                <span>Impact</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="help-box">
+                <div class="help-icon">?</div>
+
+                <div>
+                    <strong>Need help?</strong>
+                    <p>Contact FoodLoop support</p>
+                </div>
+            </div>
+
+            <button class="logout-btn" id="logoutBtn">
+                <span>↪</span>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-main">
+
+        <!-- TOP BAR -->
+        <header class="dashboard-header">
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+
+            <div>
+                <p class="header-label">Food Donor</p>
+                <h1>Good morning, Namrata! 👋</h1>
+                <p class="header-subtitle">
+                    Let's make sure surplus food reaches someone who needs it.
+                </p>
+            </div>
+
+            <div class="profile-area">
+
+                <div class="notification">
+                    🔔
+                    <span class="notification-dot"></span>
+                </div>
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        NP
+                    </div>
+
+                    <div class="profile-info">
+                        <strong>Namrata P.</strong>
+                        <span>Food Donor</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- QUICK ACTION -->
+        <section class="quick-action">
+
+            <div>
+                <span class="action-label">Have surplus food?</span>
+
+                <h2>Turn your extra food into someone's meal.</h2>
+
+                <p>
+                    Create a donation and connect with verified NGOs
+                    and shelters nearby.
+                </p>
+            </div>
+
+            <a href="create-donation.html" class="primary-btn">
+                + Create Donation
+            </a>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    📦
+                </div>
+
+                <div>
+                    <span>Active Donations</span>
+                    <strong>04</strong>
+                    <small>Currently available</small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    🤝
+                </div>
+
+                <div>
+                    <span>Claimed</span>
+                    <strong>12</strong>
+                    <small>Successfully matched</small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    ✓
+                </div>
+
+                <div>
+                    <span>Completed</span>
+                    <strong>28</strong>
+                    <small>Donations delivered</small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    🍽
+                </div>
+
+                <div>
+                    <span>Meals Saved</span>
+                    <strong>1,240</strong>
+                    <small>Estimated meals</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTENT GRID -->
+        <section class="dashboard-content">
+
+            <!-- RECENT DONATIONS -->
+            <div class="dashboard-card donations-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Recent Donations</h2>
+                        <p>Track your latest food contributions.</p>
+                    </div>
+
+                    <a href="my-donations.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="donation-list">
+
+                    <!-- ITEM -->
+                    <div class="donation-item">
+
+                        <div class="food-icon">
+                            🍛
+                        </div>
+
+                        <div class="donation-info">
+
+                            <strong>Vegetable Biryani</strong>
+
+                            <span>
+                                25 meals • Created today
+                            </span>
+
+                        </div>
+
+                        <span class="status available">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <!-- ITEM -->
+                    <div class="donation-item">
+
+                        <div class="food-icon">
+                            🍞
+                        </div>
+
+                        <div class="donation-info">
+
+                            <strong>Fresh Bread & Buns</strong>
+
+                            <span>
+                                40 meals • Yesterday
+                            </span>
+
+                        </div>
+
+                        <span class="status claimed">
+                            Claimed
+                        </span>
+
+                    </div>
+
+
+                    <!-- ITEM -->
+                    <div class="donation-item">
+
+                        <div class="food-icon">
+                            🍚
+                        </div>
+
+                        <div class="donation-info">
+
+                            <strong>Rice & Dal</strong>
+
+                            <span>
+                                30 meals • 2 days ago
+                            </span>
+
+                        </div>
+
+                        <span class="status completed">
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <!-- ITEM -->
+                    <div class="donation-item">
+
+                        <div class="food-icon">
+                            🥗
+                        </div>
+
+                        <div class="donation-info">
+
+                            <strong>Mixed Salad</strong>
+
+                            <span>
+                                15 meals • 3 days ago
+                            </span>
+
+                        </div>
+
+                        <span class="status completed">
+                            Completed
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMPACT CARD -->
+            <div class="dashboard-card impact-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Your Impact</h2>
+                        <p>Every donation counts.</p>
+                    </div>
+
+                    <span class="impact-leaf">🍃</span>
+
+                </div>
+
+
+                <div class="impact-number">
+
+                    <strong>1,240</strong>
+
+                    <span>meals saved</span>
+
+                </div>
+
+
+                <div class="impact-progress">
+
+                    <div class="progress-header">
+                        <span>Monthly goal</span>
+                        <strong>82%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                    <p>
+                        You're only 270 meals away from your monthly goal!
+                    </p>
+
+                </div>
+
+
+                <div class="impact-stats">
+
+                    <div>
+                        <strong>68 kg</strong>
+                        <span>Food rescued</span>
+                    </div>
+
+                    <div>
+                        <strong>15</strong>
+                        <span>CO₂ saved</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TIP -->
+        <section class="dashboard-tip">
+
+            <div class="tip-icon">
+                💡
+            </div>
+
+            <div>
+                <strong>Food safety tip</strong>
+
+                <p>
+                    Always mention the preparation time and storage conditions
+                    when creating a donation. This helps NGOs safely distribute
+                    the food.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/donor.js"></script>
+
+</body>
+</html>

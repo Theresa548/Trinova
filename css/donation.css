@@ -1,0 +1,488 @@
+/* ================================
+   CREATE DONATION PAGE
+================================ */
+
+body {
+    margin: 0;
+    background: #f6f8f5;
+    font-family: "Inter", sans-serif;
+    color: #1f2933;
+}
+
+
+/* ================================
+   LAYOUT
+================================ */
+
+.donation-layout {
+    min-height: 100vh;
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+    width: 250px;
+    background: #183b25;
+    color: white;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0 12px;
+    margin-bottom: 45px;
+}
+
+.sidebar-logo span span {
+    color: #8fc58a;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 15px;
+    border-radius: 10px;
+    color: #cbd8cf;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background: rgba(255,255,255,0.12);
+    color: white;
+}
+
+.nav-item.active {
+    box-shadow: inset 3px 0 0 #8fc58a;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.help-box {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 13px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.help-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #8fc58a;
+    color: #183b25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.help-box strong {
+    font-size: 12px;
+}
+
+.help-box p {
+    margin: 3px 0 0;
+    color: #b8c8bc;
+    font-size: 10px;
+}
+
+.logout-btn {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #cbd8cf;
+    padding: 12px 15px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background: rgba(255,255,255,0.08);
+    color: white;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+.donation-main {
+    margin-left: 250px;
+    padding: 40px 50px;
+    max-width: 1200px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #5e8f62;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.page-header h1 {
+    color: #183b25;
+    font-size: 30px;
+    margin: 12px 0 5px;
+}
+
+.page-header p {
+    color: #7b8580;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+/* ================================
+   FORM CARD
+================================ */
+
+.form-card {
+    background: white;
+    border: 1px solid #e1e9e0;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.section-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: #e8f3e5;
+    color: #3e7b43;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.section-heading h2 {
+    color: #183b25;
+    font-size: 17px;
+    margin: 0;
+}
+
+.section-heading p {
+    color: #929b96;
+    font-size: 11px;
+    margin: 5px 0 0;
+}
+
+
+/* ================================
+   FORM GRID
+================================ */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 12px;
+    color: #3c4941;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group label span {
+    color: #d35c45;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #dce5db;
+    border-radius: 9px;
+    background: #fbfcfa;
+    font-family: inherit;
+    font-size: 12px;
+    color: #29362e;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #72a66b;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(114,166,107,0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a5adaa;
+}
+
+
+/* ================================
+   QUANTITY
+================================ */
+
+.quantity-input {
+    display: flex;
+}
+
+.quantity-input input {
+    border-radius: 9px 0 0 9px;
+    border-right: none;
+}
+
+.quantity-input select {
+    width: 120px;
+    border-radius: 0 9px 9px 0;
+}
+
+
+/* ================================
+   SAFETY
+================================ */
+
+.safety-box {
+    background: #f1f7ee;
+    border: 1px solid #dbe9d7;
+    border-radius: 11px;
+    padding: 15px;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.safety-icon {
+    font-size: 22px;
+}
+
+.safety-box strong {
+    font-size: 12px;
+    color: #315b35;
+}
+
+.safety-box p {
+    margin: 4px 0 0;
+    font-size: 10px;
+    color: #738074;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   CHECKBOX
+================================ */
+
+.checkbox-label {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: 400 !important;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: auto;
+    margin-top: 2px;
+    accent-color: #1f5132;
+}
+
+
+/* ================================
+   REVIEW
+================================ */
+
+.review-box {
+    background: #f7f9f6;
+    border: 1px solid #e3e9e2;
+    border-radius: 12px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.review-box div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.review-box span {
+    font-size: 10px;
+    color: #8b948e;
+}
+
+.review-box strong {
+    font-size: 12px;
+    color: #29402f;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.secondary-btn,
+.submit-btn {
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    background: white;
+    border: 1px solid #d6e0d5;
+    color: #526057;
+}
+
+.secondary-btn:hover {
+    background: #f5f8f4;
+}
+
+.submit-btn {
+    border: none;
+    background: #1f5132;
+    color: white;
+}
+
+.submit-btn:hover {
+    background: #183b25;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .donation-main {
+        margin-left: 0;
+        padding: 25px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .review-box {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    .form-card {
+        padding: 20px 16px;
+    }
+
+    .review-box {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .secondary-btn,
+    .submit-btn {
+        width: 100%;
+    }
+}

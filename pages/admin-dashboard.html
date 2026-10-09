@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | FoodLoop</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-logo">
+            <div class="logo-icon">🌿</div>
+            <span>FoodLoop</span>
+        </div>
+
+        <div class="admin-role">
+            <span>ADMIN PANEL</span>
+        </div>
+
+        <nav class="admin-nav">
+
+            <a href="admin-dashboard.html" class="admin-nav-item active">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="#donations-section" class="admin-nav-item">
+                <span>🍱</span>
+                Donations
+            </a>
+
+            <a href="#users-section" class="admin-nav-item">
+                <span>👥</span>
+                Users
+            </a>
+
+            <a href="#claims-section" class="admin-nav-item">
+                <span>📋</span>
+                Claims
+            </a>
+
+            <a href="#flagged-section" class="admin-nav-item">
+                <span>⚠️</span>
+                Flagged
+            </a>
+
+            <a href="#impact-section" class="admin-nav-item">
+                <span>🌱</span>
+                Impact
+            </a>
+
+            <a href="#" class="admin-nav-item">
+                <span>⚙️</span>
+                Settings
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div class="admin-avatar">
+                    AD
+                </div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <small>System Admin</small>
+                </div>
+
+            </div>
+
+            <button id="adminLogout" class="admin-logout">
+                🚪 Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-main">
+
+
+        <!-- MOBILE HEADER -->
+
+        <div class="admin-mobile-header">
+
+            <div class="admin-logo">
+                <div class="logo-icon">🌿</div>
+                <span>FoodLoop</span>
+            </div>
+
+            <button id="adminMenuBtn" class="admin-menu-btn">
+                ☰
+            </button>
+
+        </div>
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="admin-header">
+
+            <div>
+
+                <span class="admin-page-label">
+                    ADMINISTRATION
+                </span>
+
+                <h1>
+                    Platform Overview 👋
+                </h1>
+
+                <p>
+                    Monitor FoodLoop activity and manage the food redistribution network.
+                </p>
+
+            </div>
+
+
+            <div class="admin-header-right">
+
+                <div class="admin-notification">
+                    🔔
+                    <span>3</span>
+                </div>
+
+                <div class="admin-avatar large">
+                    AD
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= QUICK STATS ================= -->
+
+        <section class="admin-stats-grid">
+
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon green">
+                    🍱
+                </div>
+
+                <div>
+                    <span>Total Donations</span>
+                    <strong>1,284</strong>
+                    <small>+12% this month</small>
+                </div>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon blue">
+                    👥
+                </div>
+
+                <div>
+                    <span>Registered Users</span>
+                    <strong>486</strong>
+                    <small>+28 this month</small>
+                </div>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon orange">
+                    📋
+                </div>
+
+                <div>
+                    <span>Active Claims</span>
+                    <strong>37</strong>
+                    <small>8 awaiting pickup</small>
+                </div>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon purple">
+                    🍽️
+                </div>
+
+                <div>
+                    <span>Meals Rescued</span>
+                    <strong>28,640</strong>
+                    <small>this year</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OVERVIEW CARDS ================= -->
+
+        <section class="admin-overview-grid">
+
+
+            <!-- PLATFORM HEALTH -->
+
+            <div class="admin-panel platform-health">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="panel-label">
+                            PLATFORM HEALTH
+                        </span>
+
+                        <h2>
+                            Today's Activity
+                        </h2>
+                    </div>
+
+                    <span class="live-status">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            🍱
+                        </div>
+
+                        <div>
+                            <strong>24 new donations</strong>
+                            <span>Food listings created today</span>
+                        </div>
+
+                        <b>+24</b>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            🤝
+                        </div>
+
+                        <div>
+                            <strong>18 donations claimed</strong>
+                            <span>Successfully matched with NGOs</span>
+                        </div>
+
+                        <b>+18</b>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            🚚
+                        </div>
+
+                        <div>
+                            <strong>12 pickups completed</strong>
+                            <span>Food successfully collected</span>
+                        </div>
+
+                        <b>+12</b>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon warning">
+                            ⚠️
+                        </div>
+
+                        <div>
+                            <strong>3 donations flagged</strong>
+                            <span>Require admin review</span>
+                        </div>
+
+                        <b class="warning-text">3</b>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMPACT -->
+
+            <div class="admin-panel impact-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="panel-label">
+                            PLATFORM IMPACT
+                        </span>
+
+                        <h2>
+                            This Month
+                        </h2>
+                    </div>
+
+                    <span class="impact-leaf">
+                        🌱
+                    </span>
+
+                </div>
+
+
+                <div class="big-impact-number">
+                    4,860
+                </div>
+
+                <p>
+                    meals successfully redirected to communities
+                </p>
+
+
+                <div class="impact-progress">
+
+                    <div class="progress-info">
+                        <span>Monthly Goal</span>
+                        <strong>81%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="impact-mini-grid">
+
+                    <div>
+                        <strong>246 kg</strong>
+                        <span>Food Rescued</span>
+                    </div>
+
+                    <div>
+                        <strong>58 kg</strong>
+                        <span>CO₂ Avoided</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DONATIONS ================= -->
+
+        <section
+            class="admin-section"
+            id="donations-section"
+        >
+
+            <div class="section-header">
+
+                <div>
+                    <span class="panel-label">
+                        DONATION MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Recent Donations
+                    </h2>
+
+                    <p>
+                        Monitor the latest food donations on the platform.
+                    </p>
+                </div>
+
+                <button class="admin-outline-btn">
+                    View All
+                </button>
+
+            </div>
+
+
+            <div class="admin-table-wrapper">
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Donation</th>
+                            <th>Donor</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                            <th>Created</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="table-food">
+
+                                    <span>🍛</span>
+
+                                    <div>
+                                        <strong>Vegetable Biryani</strong>
+                                        <small>FL-2026-00124</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Verified Restaurant</td>
+
+                            <td>25 meals</td>
+
+                            <td>
+                                <span class="table-status available">
+                                    Available
+                                </span>
+                            </td>
+
+                            <td>Today, 9:20 AM</td>
+
+                            <td>
+                                <button class="table-action">
+                                    View
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="table-food">
+
+                                    <span>🫓</span>
+
+                                    <div>
+                                        <strong>Chapati & Sabzi</strong>
+                                        <small>FL-2026-00123</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Verified Caterer</td>
+
+                            <td>40 meals</td>
+
+                            <td>
+                                <span class="table-status claimed">
+                                    Claimed
+                                </span>
+                            </td>
+
+                            <td>Today, 8:45 AM</td>
+
+                            <td>
+                                <button class="table-action">
+                                    View
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="table-food">
+
+                                    <span>🍱</span>
+
+                                    <div>
+                                        <strong>Packed Meals</strong>
+                                        <small>FL-2026-00122</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Corporate Cafeteria</td>
+
+                            <td>60 meals</td>
+
+                            <td>
+                                <span class="table-status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>Yesterday</td>
+
+                            <td>
+                                <button class="table-action">
+                                    View
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="table-food">
+
+                                    <span>🥗</span>
+
+                                    <div>
+                                        <strong>Mixed Salad</strong>
+                                        <small>FL-2026-00121</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Hotel Partner</td>
+
+                            <td>15 meals</td>
+
+                            <td>
+                                <span class="table-status flagged">
+                                    Flagged
+                                </span>
+                            </td>
+
+                            <td>Yesterday</td>
+
+                            <td>
+                                <button class="table-action review">
+                                    Review
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= USERS ================= -->
+
+        <section
+            class="admin-section"
+            id="users-section"
+        >
+
+            <div class="section-header">
+
+                <div>
+                    <span class="panel-label">
+                        USER MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Registered Users
+                    </h2>
+
+                    <p>
+                        Overview of donors and NGOs using FoodLoop.
+                    </p>
+                </div>
+
+                <button class="admin-outline-btn">
+                    Manage Users
+                </button>
+
+            </div>
+
+
+            <div class="user-summary-grid">
+
+
+                <div class="user-summary-card">
+
+                    <div class="user-summary-icon donor">
+                        🏪
+                    </div>
+
+                    <div>
+                        <span>Food Donors</span>
+                        <strong>312</strong>
+                        <small>64% of users</small>
+                    </div>
+
+                </div>
+
+
+                <div class="user-summary-card">
+
+                    <div class="user-summary-icon ngo">
+                        🤝
+                    </div>
+
+                    <div>
+                        <span>NGOs & Shelters</span>
+                        <strong>168</strong>
+                        <small>36% of users</small>
+                    </div>
+
+                </div>
+
+
+                <div class="user-summary-card">
+
+                    <div class="user-summary-icon verified">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>Verified Organizations</span>
+                        <strong>142</strong>
+                        <small>84% of NGOs</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CLAIMS ================= -->
+
+        <section
+            class="admin-section"
+            id="claims-section"
+        >
+
+            <div class="section-header">
+
+                <div>
+                    <span class="panel-label">
+                        CLAIM MONITORING
+                    </span>
+
+                    <h2>
+                        Active Claims
+                    </h2>
+
+                    <p>
+                        Track food claims awaiting pickup or completion.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="claims-table">
+
+                <div class="claims-row claims-header">
+
+                    <span>Donation</span>
+                    <span>NGO / Shelter</span>
+                    <span>Pickup</span>
+                    <span>Status</span>
+
+                </div>
+
+
+                <div class="claims-row">
+
+                    <span>
+                        🍛 Rice & Dal
+                    </span>
+
+                    <span>
+                        Hope Shelter
+                    </span>
+
+                    <span>
+                        Today · 2:30 PM
+                    </span>
+
+                    <span class="claim-pill scheduled">
+                        Scheduled
+                    </span>
+
+                </div>
+
+
+                <div class="claims-row">
+
+                    <span>
+                        🥪 Sandwiches
+                    </span>
+
+                    <span>
+                        Helping Hands NGO
+                    </span>
+
+                    <span>
+                        Tomorrow · 11 AM
+                    </span>
+
+                    <span class="claim-pill claimed">
+                        Claimed
+                    </span>
+
+                </div>
+
+
+                <div class="claims-row">
+
+                    <span>
+                        🍱 Packed Meals
+                    </span>
+
+                    <span>
+                        Care Foundation
+                    </span>
+
+                    <span>
+                        Today · 4:00 PM
+                    </span>
+
+                    <span class="claim-pill scheduled">
+                        Scheduled
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FLAGGED ================= -->
+
+        <section
+            class="admin-section flagged-section"
+            id="flagged-section"
+        >
+
+            <div class="section-header">
+
+                <div>
+                    <span class="panel-label warning-label">
+                        ATTENTION REQUIRED
+                    </span>
+
+                    <h2>
+                        Flagged Donations
+                    </h2>
+
+                    <p>
+                        Donations that require administrator review.
+                    </p>
+                </div>
+
+                <span class="flag-count">
+                    3 Pending
+                </span>
+
+            </div>
+
+
+            <div class="flagged-list">
+
+
+                <div class="flagged-card">
+
+                    <div class="flag-icon">
+                        ⚠️
+                    </div>
+
+                    <div class="flag-info">
+
+                        <strong>
+                            Mixed Salad
+                        </strong>
+
+                        <span>
+                            FL-2026-00121 · Reported due to food safety concern
+                        </span>
+
+                    </div>
+
+                    <button class="review-btn">
+                        Review
+                    </button>
+
+                </div>
+
+
+                <div class="flagged-card">
+
+                    <div class="flag-icon">
+                        ⚠️
+                    </div>
+
+                    <div class="flag-info">
+
+                        <strong>
+                            Dairy Products
+                        </strong>
+
+                        <span>
+                            FL-2026-00118 · Expiry information unclear
+                        </span>
+
+                    </div>
+
+                    <button class="review-btn">
+                        Review
+                    </button>
+
+                </div>
+
+
+                <div class="flagged-card">
+
+                    <div class="flag-icon">
+                        ⚠️
+                    </div>
+
+                    <div class="flag-info">
+
+                        <strong>
+                            Prepared Meals
+                        </strong>
+
+                        <span>
+                            FL-2026-00114 · Storage condition requires verification
+                        </span>
+
+                    </div>
+
+                    <button class="review-btn">
+                        Review
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= IMPACT ================= -->
+
+        <section
+            class="admin-impact"
+            id="impact-section"
+        >
+
+            <div>
+
+                <span class="panel-label">
+                    FOODLOOP MISSION
+                </span>
+
+                <h2>
+                    Turning surplus food into meaningful impact. 🌱
+                </h2>
+
+                <p>
+                    Every successful donation helps reduce food waste
+                    while supporting communities in need.
+                </p>
+
+            </div>
+
+
+            <div class="admin-impact-numbers">
+
+                <div>
+                    <strong>28,640</strong>
+                    <span>Meals Saved</span>
+                </div>
+
+                <div>
+                    <strong>1,284</strong>
+                    <span>Donations</span>
+                </div>
+
+                <div>
+                    <strong>486</strong>
+                    <span>Users</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="admin-footer">
+
+            <p>
+                © 2026 FoodLoop · Admin Dashboard
+            </p>
+
+            <span>
+                Platform Status: <strong>Operational</strong>
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="../js/admin.js"></script>
+
+</body>
+</html>

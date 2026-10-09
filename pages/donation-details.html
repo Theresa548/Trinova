@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donation Details | FoodLoop</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/donation-details.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="details-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">🍃</div>
+            <span>Food<span>Loop</span></span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="donor-dashboard.html" class="nav-item">
+                <span>▦</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="create-donation.html" class="nav-item">
+                <span>＋</span>
+                <span>Create Donation</span>
+            </a>
+
+            <a href="my-donations.html" class="nav-item active">
+                <span>📦</span>
+                <span>My Donations</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>📊</span>
+                <span>Impact</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="help-box">
+
+                <div class="help-icon">?</div>
+
+                <div>
+                    <strong>Need help?</strong>
+                    <p>Contact FoodLoop support</p>
+                </div>
+
+            </div>
+
+            <button class="logout-btn" id="logoutBtn">
+                ↪ &nbsp; Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="details-main">
+
+        <!-- HEADER -->
+
+        <header class="page-header">
+
+            <div>
+
+                <a href="my-donations.html" class="back-link">
+                    ← Back to My Donations
+                </a>
+
+                <div class="title-row">
+
+                    <div class="large-food-icon">
+                        🍛
+                    </div>
+
+                    <div>
+
+                        <div class="title-status">
+                            <h1>Vegetable Biryani</h1>
+
+                            <span class="status available">
+                                Available
+                            </span>
+                        </div>
+
+                        <p>
+                            Donation ID: <strong>FL-2026-00124</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button class="more-btn" id="moreBtn">
+                ⋮
+            </button>
+
+        </header>
+
+
+        <!-- STATUS TIMELINE -->
+
+        <section class="details-card">
+
+            <div class="card-heading">
+
+                <div>
+                    <h2>Donation Status</h2>
+                    <p>Track your donation from creation to collection.</p>
+                </div>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <!-- COMPLETED STEP -->
+
+                <div class="timeline-item completed">
+
+                    <div class="timeline-marker">
+                        ✓
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <strong>Donation Created</strong>
+
+                        <span>
+                            Today, 10:30 AM
+                        </span>
+
+                        <p>
+                            Your donation has been successfully submitted.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMPLETED STEP -->
+
+                <div class="timeline-item completed">
+
+                    <div class="timeline-marker">
+                        ✓
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <strong>Food Information Verified</strong>
+
+                        <span>
+                            Today, 10:32 AM
+                        </span>
+
+                        <p>
+                            Food details and safety information have been recorded.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CURRENT -->
+
+                <div class="timeline-item current">
+
+                    <div class="timeline-marker">
+                        ●
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <strong>Waiting for NGO</strong>
+
+                        <span>
+                            Currently active
+                        </span>
+
+                        <p>
+                            Verified NGOs and shelters can now discover your donation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FUTURE -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+                        4
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <strong>Claimed by NGO</strong>
+
+                        <span>
+                            Waiting
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FUTURE -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+                        5
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <strong>Pickup Scheduled</strong>
+
+                        <span>
+                            Waiting
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FUTURE -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+                        6
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <strong>Food Collected</strong>
+
+                        <span>
+                            Waiting
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TWO COLUMN AREA -->
+
+        <section class="information-grid">
+
+
+            <!-- FOOD INFORMATION -->
+
+            <div class="details-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <h2>Food Information</h2>
+                        <p>Details provided when the donation was created.</p>
+                    </div>
+
+                    <span class="edit-icon">✎</span>
+
+                </div>
+
+
+                <div class="info-list">
+
+                    <div class="info-row">
+
+                        <span>Food Name</span>
+                        <strong>Vegetable Biryani</strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Category</span>
+                        <strong>Cooked Food</strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Quantity</span>
+                        <strong>25 Meals</strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Preparation Date</span>
+                        <strong>09 October 2026</strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Preparation Time</span>
+                        <strong>09:30 AM</strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Storage</span>
+                        <strong>Refrigerated</strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Best Before</span>
+                        <strong>09 October 2026, 07:30 PM</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PICKUP INFORMATION -->
+
+            <div class="details-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <h2>Pickup Information</h2>
+                        <p>Collection details for the NGO.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="pickup-placeholder">
+
+                    <div class="pickup-icon">
+                        📍
+                    </div>
+
+                    <strong>Waiting for NGO claim</strong>
+
+                    <p>
+                        Pickup details will appear here after a verified
+                        NGO claims this donation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DESCRIPTION -->
+
+        <section class="details-card">
+
+            <div class="card-heading">
+
+                <div>
+                    <h2>Donation Description</h2>
+                </div>
+
+            </div>
+
+            <p class="description-text">
+
+                Freshly prepared vegetable biryani containing rice,
+                vegetables and mild spices. Packed in food-safe containers
+                and refrigerated after preparation.
+
+            </p>
+
+        </section>
+
+
+        <!-- IMPACT -->
+
+        <section class="impact-banner">
+
+            <div class="impact-banner-icon">
+                🌱
+            </div>
+
+            <div>
+
+                <strong>
+                    This donation can provide approximately 25 meals.
+                </strong>
+
+                <p>
+                    Every successful collection helps reduce food waste
+                    and supports people in need.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIONS -->
+
+        <div class="bottom-actions">
+
+            <a href="my-donations.html" class="secondary-btn">
+                ← Back
+            </a>
+
+            <button class="cancel-btn" id="cancelBtn">
+                Cancel Donation
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="../js/donation-details.js"></script>
+
+</body>
+</html>
